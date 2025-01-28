@@ -37,7 +37,7 @@ noise:
 
 # Save options
 save_dataset:
-  repo_dataset_name: 'Simonlob/STT_Benchmark'
+  repo_dataset_name: 'REPONAME/DATASETNAME'
   private: false
 
 
