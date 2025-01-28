@@ -1,0 +1,47 @@
+# General Settings
+general:
+  seed: 42
+  target_sampling_rate: 16000
+  samples_per_dataset: 200
+  max_duration_seconds: 30
+  aug_size: 100
+
+# Dataset parameters
+datasets:
+  - path: "google/fleurs"
+    name: "ky_kg"
+    split: "train"
+
+  - path: "Simonlob/Audio_dataset_mk4_Roza_v0"
+    split: "train"
+
+  - path: "Simonlob/Kany_dataset_mk4_Base"
+    split: "train"
+
+noise:
+  - name: 'white_noise'
+    path: '/content/drive/MyDrive/Cramer/KWS/WW_AkylAi/data_augment_NOISE/white_noice.wav'
+    snr_levels: [0.1, 0.4, 0.6, 0.8, 1.0]
+
+  - name: 'disco'
+    path: '/content/drive/MyDrive/Cramer/KWS/WW_AkylAi/data_augment_NOISE/Disco_sound.m4a'
+    snr_levels: [0.5, 1.0, 2.0, 5.0, 10.0]
+
+  - name: 'cafe'
+    path: '/content/drive/MyDrive/Cramer/KWS/WW_AkylAi/data_augment_NOISE/sounds_and_atmosphere_cafe.m4a'
+    snr_levels: [0.5, 1.0, 2.0, 5.0, 10.0]
+
+  - name: 'city_street'
+    path: '/content/drive/MyDrive/Cramer/KWS/WW_AkylAi/data_augment_NOISE/City_Street_Sound.m4a'
+    snr_levels: [0.5, 1.0, 2.0, 5.0, 10.0]
+
+# Save options
+save_dataset:
+  repo_dataset_name: 'Simonlob/STT_Benchmark'
+  private: false
+
+
+# Processing options
+processing:
+  exclude_digits: true
+  resample_audio: true
